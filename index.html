@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RXHG INFOS</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Questrial|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="article.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="photo">
+                <div class="category">RXHG</div>
+            </div>
+            <div class="news">
+                <div class="buttons">
+                    <i class="fa fa-heart-o" aria-hidden="true" onclick="toggleHeart(this)"></i>
+                    <i class="fa fa-share" aria-hidden="true" onclick="showShareLink()"></i>
+                </div>
+                <div class="title">RAYXSTUDIOZ VERSION 3.0 RELEASE DATE.</div>
+                <div class="article">
+                    WELL THE UPDATE SHOULD BE RELEASED BY 7TH OF JAN 2024, BUT IT MAY DELAYED DUE TO SOME PROBLEMS STAY TUNED HERE TO GET MORE NEWS ABOUT NEXT UPDATES. 
+                </div>
+                <div class="details">
+                    <div class="time">JUST NOW</div>
+                    <button>SOON... </button>
+                </div>
+            </div>
+        </div>
+        <a href="https://www.rayxstudioz.in" target="_blank">VISIT RAYXSTUDIOZ</a>
+    </div>
+
+    <script>
+        var liked = localStorage.getItem('liked');
+        var heartIcon = document.querySelector('.fa-heart-o');
+
+        if (liked) {
+            heartIcon.classList.add('fa-heart');
+            heartIcon.style.color = '#ff69b4';
+        }
+
+        function toggleHeart(heartIcon) {
+            heartIcon.classList.toggle('fa-heart-o');
+            heartIcon.classList.toggle('fa-heart');
+
+            if (heartIcon.classList.contains('fa-heart')) {
+                heartIcon.style.color = '#ff69b4';
+                // Save liked status to localStorage
+                localStorage.setItem('liked', 'true');
+            } else {
+                heartIcon.style.color = '#bbbbbb';
+                // Remove liked status from localStorage
+                localStorage.removeItem('liked');
+            }
+        }
+
+        function showShareLink() {
+            var shareLink = prompt("Copy the link below:", "https://your-article-link.com");
+        }
+    </script>
+</body>
+</html>
+
+<style>
+    body{
+	background-color: #e3e7e8;
+	padding: 0;
+	margin: 0;
+}
+.container{
+	height: 500px;
+	width: 350px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	}
+.card{
+	background-color: white;
+	height: 500px;
+	width: 350px;
+	position: absolute;
+	top: -30px;
+	box-shadow: 15px 10px 20px 0 rgba(32, 32, 35,0.3);
+	transform: scale(0.8);
+}
+.photo{
+	background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4Y7Bt6H9hw2jKV2MGsqEiJJmFDce6w-IxDOy-jPNyoMy1KrNeFQ0QKBfyE1KKgHLduRZWwV_MBipmHElR7OKlIw8WsKgbYFX8NrnLNDrStE7PQIzg8vQI6-znTTPG1u3oFeS93WXwbOl3vWSxS7zHzsfoMEHH2v5yEwnzlxNHFa8MSEFccbDqD6923z4/s320/computer-construction-funny-humor-wallpaper-preview.jpg);
+	height: 45%;
+	width: 100%;
+	background-size: 400px 300px;
+	position: relative;
+}
+.category{
+	background-color: #e90014;
+	color: white;
+	height: 30px;
+	width: 130px;
+	position: absolute;
+	bottom: -10px;
+	font-size: 25px;
+	font-family: 'Questrial',sans-serif;
+	text-align: center;
+	padding: 5px 0 5px 10px;
+	text-transform: capitalize;
+	left: -15px;
+	letter-spacing: 1px;
+}
+.category:before{
+	position: absolute;
+	content: "";
+	height: 0;
+	width: 0;
+	border-top:10px solid #d8001a;
+	border-left:15px solid transparent;
+	left: 0;
+	bottom: -10px;
+}
+.news{
+	height: 55%;
+	width: 96%;
+	text-align: justify;
+	position: relative;
+	padding-left: 4%;
+	box-sizing: border-box;
+	line-height: 35px;
+	font-family: "Work Sans",sans-serif;
+}
+.buttons{
+	position: absolute;
+	right: 0;
+	top:5px;
+	font-size: 20px;
+}
+.fa{
+	margin-left: 10px;
+	color: #bbbbbb;
+}
+.title{
+	font-size: 22px;
+	position: absolute;
+	top:38px;
+	color: #2c2c2c;
+	font-family: 'Montserrat',sans-serif;
+	font-weight: 600;
+	
+}
+.article{
+	position: absolute;
+	top:110px;
+	font-size: 18px;
+	line-height: 22px;
+	color: #444444;
+	
+}
+.time{
+	position: absolute;
+	bottom: 5px;
+	font-size: 18px;
+	color: #bbbbbb;
+}
+button{
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+	height: 40px;
+	width: 120px;
+	background-color: #e90014;
+	border:none;
+	color: white;
+	font-size: 18px;
+	font-family: 'Questrial',sans-serif;
+	outline: none
+}
+a{
+	background-color: #e90014;
+	color: white;
+	font-family: "Montserrat",sans-serif;
+	font-size: 22px;
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	width: 280px;
+	padding: 7px 0 7px 0;
+	text-align: center;
+	text-decoration:none;
+	box-shadow: 15px 10px 20px 0 rgba(32, 32, 35,0.3);
+}	
+</style>
